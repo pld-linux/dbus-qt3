@@ -1,0 +1,25 @@
+diff -aurN dbus-1-qt3-0.2.orig/configure.in dbus-1-qt3-0.2/configure.in
+--- dbus-1-qt3-0.2.orig/configure.in	2006-01-22 23:58:18.000000000 +0100
++++ dbus-1-qt3-0.2/configure.in	2006-08-17 20:28:16.000000000 +0200
+@@ -22,10 +22,10 @@
+   dbus_lib=NOTFOUND
+   dbus=NOTFOUND
+ 
+-  search_incs="/usr/include /usr/include/dbus-1.0 /usr/local/include /usr/local/include/dbus-1.0"
++  search_incs="/usr/include /usr/include/dbus-1.0"
+   AC_FIND_FILE(dbus/dbus.h, $search_incs, dbus_incdir)
+ 
+-  search_incs_arch_deps="/usr/lib/dbus-1.0/include /usr/local/lib/dbus-1.0/include"
++  search_incs_arch_deps="${libdir}/dbus-1.0/include"
+   AC_FIND_FILE(dbus/dbus-arch-deps.h, $search_incs_arch_deps, dbus_incdir_arch_deps)
+ 
+   if [test -r $dbus_incdir/dbus/dbus.h] && [test -r $dbus_incdir_arch_deps/dbus/dbus-arch-deps.h] ; then
+@@ -33,7 +33,7 @@
+     dbus_inc=FOUND
+   fi
+ 
+-  search_libs="/usr/lib /usr/local/lib"
++  search_libs="${libdir}"
+   AC_FIND_FILE(libdbus-1.so, $search_libs, dbus_libdir)
+ 
+   if test -r $dbus_libdir/libdbus-1.so ; then
