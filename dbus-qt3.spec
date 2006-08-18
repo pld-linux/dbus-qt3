@@ -5,12 +5,13 @@ Summary:	Qt-based library for using D-BUS
 Summary(pl):	Biblioteka do u¿ywania D-BUS oparta o Qt
 Name:		dbus-qt3
 Version:	0.2
-Release:	2
+Release:	2.1
 License:	AFL v2.1 or GPL v2
 Group:		Libraries
 Source0:	http://www.sbox.tugraz.at/home/v/voyager/%{rname}-%{version}.tar.bz2
 # Source0-md5:	574ec7c8e0c227498a4fbbd6b2255853
 Patch0:		%{name}-configure.patch
+Patch1:		%{name}-mainloop-integration.patch
 URL:		http://www.freedesktop.org/Software/dbus
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -57,6 +58,7 @@ Statyczna biblioteka do u¿ywania D-BUS oparta o Qt.
 %prep
 %setup -qn %{rname}-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.sub .
