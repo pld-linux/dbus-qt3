@@ -18,7 +18,6 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-devel >= 0.91
 BuildRequires:	qt-devel >= 6:3.1.0
-Obsoletes:	dbus-qt
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +34,6 @@ Summary(pl):	Pliki nag³ówkowe biblioteki do u¿ywania D-BUS opartej o Qt
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-devel >= 0.91
-Obsoletes:	dbus-qt-devel
 
 %description devel
 Header files for Qt-based library for using D-BUS.
@@ -48,7 +46,6 @@ Summary:	Static Qt-based library for using D-BUS
 Summary(pl):	Statyczna biblioteka do u¿ywania D-BUS oparta o Qt
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	dbus-qt-static
 
 %description static
 Static Qt-based library for using D-BUS.
