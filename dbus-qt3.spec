@@ -2,7 +2,7 @@
 %define		rname		dbus-1-qt3
 #
 Summary:	Qt-based library for using D-BUS
-Summary(pl.UTF-8):   Biblioteka do używania D-BUS oparta o Qt
+Summary(pl.UTF-8):	Biblioteka do używania D-BUS oparta o Qt
 Name:		dbus-qt3
 Version:	0.2
 Release:	2.2
@@ -30,7 +30,7 @@ z abstrakcją wątków i główną pętlą Qt.
 
 %package devel
 Summary:	Header files for Qt-based library for using D-BUS
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki do używania D-BUS opartej o Qt
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki do używania D-BUS opartej o Qt
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-devel >= 0.91
@@ -43,7 +43,7 @@ Pliki nagłówkowe biblioteki do używania D-BUS opartej o Qt.
 
 %package static
 Summary:	Static Qt-based library for using D-BUS
-Summary(pl.UTF-8):   Statyczna biblioteka do używania D-BUS oparta o Qt
+Summary(pl.UTF-8):	Statyczna biblioteka do używania D-BUS oparta o Qt
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
