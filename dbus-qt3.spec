@@ -9,11 +9,11 @@ Release:	2.2
 # AFL v2.1 or GPL v2+, but Qt license enforces GPL
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://www.sbox.tugraz.at/home/v/voyager/%{rname}-%{version}.tar.bz2
+Source0:	http://people.freedesktop.org/~krake/dbus-1-qt3/%{rname}-%{version}.tar.bz2
 # Source0-md5:	574ec7c8e0c227498a4fbbd6b2255853
 Patch0:		%{name}-configure.patch
 Patch1:		kde-ac260.patch
-URL:		http://www.freedesktop.org/Software/dbus
+URL:		http://www.freedesktop.org/Software/DBusBindings
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-devel >= 0.91
