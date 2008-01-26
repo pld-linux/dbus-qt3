@@ -1,19 +1,18 @@
 #
-%define		rname		dbus-1-qt3
+%define		rname		libdbus-1-qt3
 #
 Summary:	Qt-based library for using D-BUS
 Summary(pl.UTF-8):	Biblioteka do używania D-BUS oparta o Qt
 Name:		dbus-qt3
-Version:	0.7
+Version:	0.8.1
 Release:	1
 # AFL v2.1 or GPL v2+, but Qt license enforces GPL
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://people.freedesktop.org/~krake/dbus-1-qt3/%{rname}-%{version}.tar.gz
-# Source0-md5:	763cec940da1cf0e9fa7e18964b1dc45
+Source0:	http://people.freedesktop.org/~krake/dbus-1-qt3/%{rname}-%{version}.tar.bz2
+# Source0-md5:	6308f50cfc715919c677fc10129421a0
 Patch0:		%{name}-configure.patch
-Patch1:		%{name}-admin.patch
-Patch2:		kde-ac260-lt.patch
+Patch1:		kde-ac260-lt.patch
 URL:		http://www.freedesktop.org/Software/DBusBindings
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.6.1
@@ -58,8 +57,6 @@ Statyczna biblioteka do używania D-BUS oparta o Qt.
 %setup -qn %{rname}-%{version}
 %patch0 -p1
 %patch1 -p1
-chmod +x admin/detect-autoconf.pl
-%patch2 -p1
 
 %build
 cp -f /usr/share/automake/config.* admin
@@ -83,6 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/libdbus-1-qt3.so.*.*.*
+%ghost %attr(755,root,root) %{_libdir}/libdbus-1-qt3.so.?
 
 %files devel
 %defattr(644,root,root,755)
