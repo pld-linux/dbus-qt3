@@ -80,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/libdbus-1-qt3.so.*.*.*
-%ghost %attr(755,root,root) %{_libdir}/libdbus-1-qt3.so.?
+%attr(755,root,root) %ghost %{_libdir}/libdbus-1-qt3.so.?
 
 %files devel
 %defattr(644,root,root,755)
