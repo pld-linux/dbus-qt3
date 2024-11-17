@@ -5,7 +5,7 @@ Summary:	Qt-based library for using D-BUS
 Summary(pl.UTF-8):	Biblioteka do używania D-BUS oparta o Qt
 Name:		dbus-qt3
 Version:	0.8.1
-Release:	2
+Release:	3
 # AFL v2.1 or GPL v2+, but Qt license enforces GPL
 License:	GPL v2+
 Group:		Libraries
@@ -70,6 +70,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libdbus-1-qt3.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -85,7 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libdbus-1-qt3.so
-%{_libdir}/libdbus-1-qt3.la
 %{_includedir}/dbus-1.0/qt3
 %{_pkgconfigdir}/dbus-1-qt3.pc
 
